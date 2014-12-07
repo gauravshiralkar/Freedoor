@@ -83,49 +83,31 @@ function enable() {
         <table class="table table-bordered table-hover">
             <tbody style="text-align:left;">
             <tr>
-                <th style="width: 150px;">Movie Name: </th>
+                <th style="width: 150px;">Product Name: </th>
                 <td><input class="form-control" name="movie_name" size = "50" data-type="text" data-placement="right" required></td>
             </tr>
             <tr>
-                <th style="width: 150px;">Banner: </th>
+                <th style="width: 150px;">Quantity: </th>
                 <td><input class="form-control" name="banner" size = "50" data-type="text" data-placement="right" required></td>
             </tr>
 
             <tr>
-                <th style="width: 150px;">Release Date: </th>
+                <th style="width: 150px;">Expected Offer: </th>
                 <td><input class="form-control" name="releaseDate" size = "50" data-type="text" data-placement="right" required></td>
             </tr>
             <tr>
-                <th style="width: 150px;">Rent Amount: </th>
-                <td><input class="form-control" name="rentAmount" size = "50" data-type="text" data-placement="right" required></td>
+                <th style="width: 150px;">Description: </th>
+                <td><input class="form-control" name="rentAmount" size = "50" data-type="text area" data-placement="right" required></td>
             </tr>
             <tr>
                 <th style="width: 150px;">Category: </th>
-                <td><select class="form-control" id="category"
-                        name="category"  onchange="enable();">
-                    <option value="" selected="selected">select category</option>
-                    <option value="drama">Drama</option>
-                    <option value="comedy">Comedy</option>
-                    <option value="biography">Biography</option>
-                    <option value="adventure">Adventure</option>
-                    <option value="music">Music</option>
-                    <option value="thriller">Thriller</option>
-                    <option value="history">History</option>
-                    <option value="reality">Reality-TV</option>
-                    <option value="family">Family</option>
-                    <option value="animation">Animation</option>
-                    <option value="other">Other</option>
-
-                </select>
+                <td><input class="form-control" name="rentAmount" size = "50" data-type="text area" data-placement="right" required></td>
                 </td>
             </tr>
-            <tr>
-            <td></td><td><input class="form-control" disabled="true"  name="other" id="other" size = "50" data-type="text" data-placement="right" required></a></td>
+            <tr> <th style="width: 150px;">Expiry date: </th>
+            <td><input class="form-control" name="rentAmount" size = "50" data-type="text area" data-placement="right" required></td>
             </tr>
-            <tr>
-                <th style="width: 150px;">Available Copies: </th>
-                <td><input class="form-control" name="availableCopies" size = "50" data-type="text" data-placement="right" required></a></td>
-            </tr>
+            
            
             </tr>
 
@@ -133,7 +115,7 @@ function enable() {
             </tbody>
         </table>
         <div align ="center" >
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Add Post</button>
         &nbsp
         <td> <a href="/dashboard" class="btn btn-primary">Cancel </a></td></tr> </table>
 	</div>

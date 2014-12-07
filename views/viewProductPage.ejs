@@ -32,7 +32,7 @@ function confirmDeletion() {
 
     <div class="page-header text-center">
 
-        <h1><span class="fa fa-anchor"></span> View Movie Page</h1>
+        <h1><span class="fa fa-anchor"></span> View Product Page</h1>
     </div>
     <!-- show any messages that come back with authentication -->
 	<% if (message.length > 0) { %>
@@ -45,28 +45,28 @@ function confirmDeletion() {
                 <tbody style="text-align:left;">
                 
                 <tr>
-                    <th style="width: 150px;">MovieID: </th>
+                    <th style="width: 150px;">ProductID: </th>
                     <td><%=movies.id%><br></td>
                 </tr>
                 <tr>
-                    <th style="width: 150px;">Movie Name: </th>
+                    <th style="width: 150px;">Product Name: </th>
                     <td><%=movies.MovieName%><br></td>
                 </tr>
                 <tr>
-                    <th style="width: 150px;">Movie Banner: </th>
+                    <th style="width: 150px;">Quantity: </th>
                     <td><%= movies.MovieBanner %></td>
                 </tr>
                 <tr>
-                    <th style="width: 150px;">Release Date: </th>
+                    <th style="width: 150px;">Expected Offer: </th>
                     <td><%= movies.ReleaseDate %><br></td>
                 </tr>
                 <tr>
-                    <th style="width: 150px;">Rent Amount: </th>
+                    <th style="width: 150px;">Description: </th>
                     <td><%= movies.RentAmount %></td>
                 </tr>
 
                 <tr>
-                    <th style="width: 150px;">Available Copies: </th>
+                    <th style="width: 150px;">Expiry: </th>
                     <td><%= movies.AvailableCopies %></td>
                 </tr>
 
@@ -89,9 +89,9 @@ function confirmDeletion() {
             
             
              <div class="col-sm-6 col-sm-offset-3" style="text-align: center;">
-    <a href="/modifyMovie/<%= movies.id %>" class="btn btn-primary">Modify Movie</a>
-    <a href="/seeUsers/<%= movies.id %>" class="btn btn-primary">Users who have issued this Movie</a>
-     <a href="/deleteMovie/<%= movies.id %>" onClick=""  class="btn btn-primary">Delete Movie</a>
+    <a href="/modifyMovie/<%= movies.id %>" class="btn btn-primary">Modify Product</a>
+    //<a href="/seeUsers/<%= movies.id %>" class="btn btn-primary">Users who have issued this Movie</a>
+     <a href="/deleteMovie/<%= movies.id %>" onClick=""  class="btn btn-primary">Delete Product</a>
      </div>
     </form>
 

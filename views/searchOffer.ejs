@@ -1,0 +1,48 @@
+<%- include adminheader %>
+<link href="/bootstrap.css" rel="stylesheet">
+<body>
+<div style="padding:30px">
+</div>
+
+<br><br>
+<div class="container">
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Search Offer</h1>
+    </div>
+
+<!-- show any messages that come back with authentication -->
+    	<% if (message.length > 0) { %>
+    		<div class="alert alert-danger"><%= message %></div>
+    	<% } %>
+<label> Search Attribute </label>
+
+<form class="form-inline" role="form" method="post" action="/searchMovie">
+  <select class="form-control" id="searchparam" name="searchparam">
+                   
+                    <option value="Product">Product</option>
+                    <option value="Id">Id</option>
+                   
+  </select> &nbsp&nbsp&nbsp&nbsp
+  <div class="form-group">
+    <label class="sr-only">Search String</label>
+    <input type="text" class="form-control" placeholder="Enter Search String" id="str" name="str">
+  </div>
+  &nbsp&nbsp&nbsp&nbsp
+  <button type="submit" class="btn btn-primary">Search<i class="icon-search"></i></button>
+   <td> <a href="/dashboard" class="btn btn-primary">Cancel </a></td></tr> </table>
+</form>
+<br>
+
+    <% if(movies!=null){movies.forEach( function ( movies ){ %>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a href="/viewOfferPage/<%= movies.id %>"><h3 class="panel-title"> <%= movies.MovieName %></h3> </a>
+            
+            <div>Id: <%= movies.id %></div>
+        </div>        
+	</div>
+<% });} %>
+
+</div>
+</body>

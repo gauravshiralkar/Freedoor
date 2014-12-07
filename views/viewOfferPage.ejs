@@ -1,0 +1,97 @@
+<%- include adminheader %>
+<link href="/bootstrap.css" rel="stylesheet">
+<script type="text/javascript">
+function confirmDeletion() {
+ 
+  var confirmmessage = "Are you sure you want to delete?";
+ 
+  var message = "Action Was Cancelled By User";
+ 
+  if (confirm(confirmmessage)) {
+      alert("Movie Deleted ");
+      document.getElementById('myform').action= = "/deleteMovie/<%= movies.id %>";
+	  document.getElementById('myform').submit();
+ 
+  } else {
+ 
+       alert(message);
+ 
+  }
+ 
+}
+</script>
+
+
+
+<body>
+
+<div style="padding:30px">
+</div>
+
+<div class="container">
+
+    <div class="page-header text-center">
+
+        <h1><span class="fa fa-anchor"></span> View Product Page</h1>
+    </div>
+    <!-- show any messages that come back with authentication -->
+	<% if (message.length > 0) { %>
+		<div class="alert alert-danger"><%= message %></div>
+	<% } %>
+   
+    <form name="myform" id="myform" method="get">
+        <div class="col-md-6 col-md-offset-3">
+            <table class="table table-bordered table-hover">
+                <tbody style="text-align:left;">
+                
+                <tr>
+                    <th style="width: 150px;">ID: </th>
+                    <td><%=movies.id%><br></td>
+                </tr>
+                <tr>
+                    <th style="width: 150px;">Buying Quantity: </th>
+                    <td><%=movies.MovieName%><br></td>
+                </tr>
+                <tr>
+                    <th style="width: 150px;">Offered Details: </th>
+                    <td><%= movies.MovieBanner %></td>
+                </tr>
+                <tr>
+                    <th style="width: 150px;">Buyer Status: </th>
+                    <td><%= movies.ReleaseDate %><br></td>
+                </tr>
+                <tr>
+                    <th style="width: 150px;">Seller Status: </th>
+                    <td><%= movies.RentAmount %></td>
+                </tr>
+
+                <tr>
+                    <th style="width: 150px;">Offer Expiry: </th>
+                    <td><%= movies.AvailableCopies %></td>
+                </tr>
+
+               
+
+                </tbody>
+            </table>
+           
+
+
+           
+
+
+            </div>
+            
+            
+             <div class="col-sm-6 col-sm-offset-3" style="text-align: center;">
+    <a href="/modifyMovie/<%= movies.id %>" class="btn btn-primary">Modify Offer</a>
+    //<a href="/seeUsers/<%= movies.id %>" class="btn btn-primary">Users who have issued this Movie</a>
+     <a href="/deleteMovie/<%= movies.id %>" onClick=""  class="btn btn-primary">Delete Product</a>
+     </div>
+    </form>
+
+
+
+</div>
+
+</body>
