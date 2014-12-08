@@ -1,6 +1,6 @@
 //// config/database.js
 module.exports = {
 
-    url: 'mongodb://cmpe273:cmpe273@oceanic.mongohq.com:10071/cmpe273'
+    url: 'mongodb://gaurav:gaurav@dogen.mongohq.com:10056/cmpe275'
 
 };
