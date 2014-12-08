@@ -49,7 +49,7 @@ Offer.prototype.createOffer = function(callback,productId,request)
 	offerobj.createOffer(function(err,res) {
 		callback(err,res);
 
-	},productId,request.buyingQty, request.offeredDetails, request.buyerStatus, request.sellerStatus, request.offerExpiry, request.buyerId, request.comment);
+	},request.productId,request.buyingQty, request.offeredDetails, request.buyerStatus, request.sellerStatus, request.offerExpiry, request.buyerId, request.comment);
 
 };
 

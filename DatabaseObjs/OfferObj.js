@@ -174,6 +174,4 @@ OfferObj.prototype.removeOffer = function (callback, productId,categoryId,offerI
 }
 
 
-
-
 module.exports = OfferObj;
