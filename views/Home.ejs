@@ -17,15 +17,31 @@
 <h1>Video Library Management!!!</h1>
 </br></br><br/><br/><br/>
 <div class="btn-large">
-<a href="/viewCustomers" class = "btn btn-primary">View All Customers</a><br>
-<a href="/viewPremiumCustomers" class = "btn btn-primary">Premium Customers</a><br>
+
+<h3> Create Users </h3>
+<a href="/viewCustomers" class = "btn btn-primary">View All Users</a><br><br>
+<form action="/users" method="post">Email:<input type="text" name="emailId">fname:<input type="text" name="firstName">lname:<input type="text" name="lastName">mobileNum:<input type="text" name="mobile"><input type="Submit"></form><br>
+
 <a href="/viewNormalCustomers" class = "btn btn-primary">Simple Customers</a><br>
 <a href="/searchPersonInfo" class = "btn btn-primary">Search person info</a><br>
-<a href="/createUser" class = "btn btn-primary">Create Customer</a><br>
+<a href="/users" class = "btn btn-primary">Create Customer</a><br>
 <a href="/removeuser" class = "btn btn-primary">Delete Customers</a><br>
 <a href="/changeCustomerInfo" class = "btn btn-primary">Update Profile</a><br>
-<a href="/viewAllHistory" class = "btn btn-primary">View Purchase History</a><br>
-<a href="/listMovies" class = "btn btn-primary">List and Issue Movies</a><br>
+<h3> Create Categories </h3>
+<a href="/category" class = "btn btn-primary">View Categories</a><br>
+<form action="/category" method="post">Category Name:<input type="text" name="categoryName"><input type="Submit"></form><br>
+
+<h3> Create Product </h3>
+
+<a href="/category/1/product" class = "btn btn-primary">View Products</a><br>
+<form action="/category/1/product" method="post">
+productName:<input type="text" name="productName">
+quantity:<input type="text" name="quantity">
+userId:<input type="text" name="userId">
+expectedOffer:<input type="text" name="expectedOffer">
+categoryId:<input type="text" name="categoryId">
+<input type="Submit"></form><br>
+
 <a href="/viewMovieInfo/:movieId" class = "btn btn-primary">View Movie Info</a><br>
 <a href="/addMovie" class = "btn btn-primary">Add Movies</a><br>
 <a href="/deleteMovie" class = "btn btn-primary">Delete Movie</a><br>

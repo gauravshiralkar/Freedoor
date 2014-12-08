@@ -1,4 +1,6 @@
 var mongoose = require('mongoose');
+//mongoose.connect('mongodb://localhost/cmpe275');
+
 var offer = require('../DatabaseObjs/OfferObj');
 
 

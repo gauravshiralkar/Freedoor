@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+//mongoose.connect('mongodb://localhost/cmpe275');
 
 	var CategorySchema = new mongoose.Schema({
 		categoryId:Number,

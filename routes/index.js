@@ -5,8 +5,6 @@ var Category = require('../Model/Category');
 var offer = require('../Model/Offer');
 var ejs = require("ejs");
 
-//hadcoded value. we need to get the value from session
-
 
 exports.index = function(req, res){
 	res.render('Home');
@@ -37,7 +35,6 @@ exports.createuser =function(req,res){
 	newUser.createUser(function(err,result) {
 		if(err){
 			console.log("Error"+err);
-			//throw(err);
 			res.json(err);
 		}else
 		{
@@ -68,7 +65,6 @@ exports.viewCustomers =function(req,res){
 };
 
 exports.updateuser =function(req,res){
-	//req.body.MemberShipID = "937-49-3682";
 	console.log("Update user");
 	var newUser = new user();
 	newUser.updateUser(function(err,result) {
@@ -92,10 +88,9 @@ exports.getUserById = function(req,res){
 		if(err){
 			console.log("Get user by Id"+err);
 			res.json(err);
-			//res.json(res.json({"status": err}));
-			//throw(err);
+			
 		}else{
-			//return number of rows that deleted
+			
 			console.log("return "+result);
 			res.json(result);
 		}
@@ -111,10 +106,9 @@ exports.removeUser = function(req,res){
 		if(err){
 			console.log("remove user error"+err);
 			res.json(err);
-			//res.json(res.json({"status": err}));
-			//throw(err);
+			
 		}else{
-			//return number of rows that deleted
+			
 			console.log("return "+result);
 			res.json({"status": "success", "Message": "User Deleted"});
 		}
@@ -130,7 +124,7 @@ exports.createProduct =function(req,res){
 	newProduct.createProduct(function(err,result) {
 		if(err){
 			console.log("Error"+err);
-			//throw(err);
+			
 			res.json(err);
 		}else
 		{
@@ -148,7 +142,7 @@ exports.updateProduct =function(req,res){
 		if(err){
 			console.log("Error"+err);
 			res.json(err);
-			//throw(err);
+			
 		}else
 		{
 			console.log("success");
@@ -159,16 +153,15 @@ exports.updateProduct =function(req,res){
 };
 
 exports.removeProduct = function(req,res){
-	//console.log("remove product error"+req.params.emailId);
+	
 	var newProduct = new Product();
 	newProduct.remove(function(err,result){
 		if(err){
 			console.log("remove Product error"+err);
 			res.json(err);
-			//res.json(res.json({"status": err}));
-			//throw(err);
+			
 		}else{
-			//return number of rows that deleted
+			
 			console.log("return "+result);
 			res.json({});
 		}
@@ -184,10 +177,9 @@ exports.getProductById = function(req,res){
 		if(err){
 			console.log("Get Product by Id"+err);
 			res.json(err);
-			//res.json(res.json({"status": err}));
-			//throw(err);
+			
 		}else{
-			//return number of rows that deleted
+			
 			console.log("return "+result);
 			res.json(result);
 		}
@@ -203,10 +195,9 @@ exports.getProductsBycatId = function(req,res){
 		if(err){
 			console.log("Get Product by Id"+err);
 			res.json(err);
-			//res.json(res.json({"status": err}));
-			//throw(err);
+			
 		}else{
-			//return number of rows that deleted
+			
 			console.log("return "+result);
 			res.json({'products':result});
 		}
@@ -221,8 +212,7 @@ exports.createCategory =function(req,res){
 	var newCategory = new Category();
 	newCategory.createCategory(function(err,result) {
 		if(err){
-			console.log("Error"+err);
-			//throw(err);
+			console.log("Error"+err);			
 			res.json(err);
 		}else
 		{
@@ -257,10 +247,9 @@ exports.getCategoryById = function(req,res){
 		if(err){
 			console.log("Get category by Id"+err);
 			res.json(err);
-			//res.json(res.json({"status": err}));
-			//throw(err);
+			
 		}else{
-			//return number of rows that deleted
+			
 			console.log("return "+result);
 			res.json(result);
 		}
@@ -336,7 +325,7 @@ exports.byproductid =function(req,res){
 };
 
 exports.updateoffer =function(req,res){
-	//req.body.MemberShipID = "937-49-3682";
+	
 	console.log("Update offer"+ req.params.offerId);
 	var newOffer = new offer();
 	newOffer.updateOffer(function(err,result) {
@@ -358,10 +347,9 @@ exports.removeOffer = function(req,res){
 		if(err){
 			console.log("remove offer error"+err);
 			res.json(err);
-			//res.json(res.json({"status": err}));
-			//throw(err);
+			
 		}else{
-			//return number of rows that deleted
+			
 			console.log("return "+result);
 			res.json({});
 		}

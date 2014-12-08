@@ -11,7 +11,8 @@ var ejs = require("ejs");
 
 var app = express();
 
-
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/cmpe275');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -38,7 +39,7 @@ if ('development' === app.get('env')) {
 
 app.get('/', routes.index);
 
-// Customer Related
+// Customer
 
 app.get('/viewCustomers', routes.viewCustomers);
 app.post('/users', routes.createuser);

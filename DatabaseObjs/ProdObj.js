@@ -1,4 +1,6 @@
 var mongoose = require('mongoose');
+//mongoose.connect('mongodb://localhost/cmpe275');
+
 
 	var ProductSchema = new mongoose.Schema({
 		productId:Number,
